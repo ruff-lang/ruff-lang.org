@@ -1,2 +1,2 @@
-# ruff-lang.org
-Website source code for https://ruff-lang.org
+# bunny-lang.org
+Website source code for https://bunny-lang.org
