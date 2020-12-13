@@ -1,4 +1,5 @@
 # bunny-lang.org
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3cefcfae-8c1c-4d0a-af4a-818d98d29f40/deploy-status)](https://app.netlify.com/sites/bunny-lang/deploys)
 
 Website source code for https://bunny-lang.org.
 
