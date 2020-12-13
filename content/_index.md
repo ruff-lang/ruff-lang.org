@@ -14,16 +14,12 @@ Below is a list of features planned for the first stable release of Bunny which 
 
 - **Minimal and Modern Syntax**, elegant [^1] and expressive.
 - **Functional**, as in functions are values.
-- **Tail-Call Optimized** [^2], recursion without the overhead.
+- **Tail-Call Optimized**, recursion without the overhead.
 - **Garbage-Collected**.
-- **Hygienic Macros** [^3].
-- **Continuations** [^4], as a first-class language feature.
-- **Concurrent**, CSP with fibers and channels [^5].
+- **Hygienic Macros**.
+- **Continuations**, as a first-class language feature.
+- **Concurrent**, CSP with fibers and channels.
 - **Batteries Included**, to be a complete and productive tool.
 - **Integrated Tooling**, ships as a single binary with all tools.
 
-[^1]: Ultimately, this comes down to personal preference. Relevant [video](https://www.youtube.com/watch?v=Hgd2F2QNfEE).
-[^2]: https://en.wikipedia.org/wiki/Tail_call
-[^3]: https://en.wikipedia.org/wiki/Hygienic_macro
-[^4]: https://en.wikipedia.org/wiki/Continuation#First-class_continuations
-[^5]: https://en.wikipedia.org/wiki/Communicating_sequential_processes
+[^1]: Ultimately, this comes down to personal preference.
