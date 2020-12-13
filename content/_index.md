@@ -1,6 +1,10 @@
+## What
+
 Bunny (_bunny_, not _bunny lang_) is a simple, practical, and fun general purpose dynamic programming language.
 
 ---
+
+## Why
 
 The motivation is to produce a concrete language specification with wish-list features from it's inspirations and to bundle the a set of developer-friendly features into a cohesive and enjoyable language.
 
@@ -8,7 +12,7 @@ It is inspired by classic Lisps like [Common Lisp](https://common-lisp.net/) and
 
 ---
 
-## Language Features
+## How
 
 - **Minimal and Modern Syntax**, striving for elegance and expressivity.
 - **Functional**, as in functions are values.
