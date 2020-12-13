@@ -15,10 +15,6 @@
   {{ end -}}
 
   {{- partial "style.html" . -}}
-
-  <!-- A partial to be overwritten by the user.
-  Simply place a custom_head.html into
-  your local /layouts/partials-directory -->
   {{- partial "custom_head.html" . -}}
 </head>
 
@@ -32,10 +28,6 @@
   <footer>
     {{- partial "footer.html" . -}}
   </footer>
-
-  <!-- A partial to be overwritten by the user.
-  Simply place a custom_body.html into
-  your local /layouts/partials-directory -->
   {{- partial "custom_body.html" . -}}
 </body>
 
