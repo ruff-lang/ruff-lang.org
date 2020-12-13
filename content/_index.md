@@ -2,7 +2,7 @@ Bunny (_bunny_, not _bunny lang_) aims to be a simple, practical, and fun genera
 
 The motivation is to produce a concrete language specification with wish-list features from it's inspirations. The goal is to bundle the most developer-friendly features into a cohesive and enjoyable language.
 
-It is inspired by a collection of languages including classic Lisp dialects like Common Lisp and Scheme, modern Lisp-inspired languages like Clojure, dynamic and general purpose languages like Ruby and Python, and elegant concurrent languages like Go.
+It is inspired by classic Lisps like Common Lisp and Scheme, modern Lisps like Clojure, the ease of use of dynamic and general purpose languages like Ruby and Python, and the elegant concurrency of Go.
 
 ---
 
