@@ -14,7 +14,7 @@ It is inspired by classic Lisps like [Common Lisp](https://common-lisp.net/) and
 
 ## How
 
-Below is a list of planned features for the first stable release of Bunny.
+Below is a list of features planned for the first stable release of Bunny which together _should_ satisfy the question of 'how'.
 
 - **Minimal and Modern Syntax**, striving for elegance and expressivity.
 - **Functional**, as in functions are values.
