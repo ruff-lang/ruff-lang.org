@@ -22,4 +22,4 @@ Below is a list of features planned for the first stable release of Bunny which 
 - **Batteries Included**, to be a complete and productive tool.
 - **Integrated Tooling**, ships as a single binary with all tools.
 
-[^1]: Ultimately, this comes down to personal preference.
+[^1]: this obviously comes down to personal preference, and yours might differ.
