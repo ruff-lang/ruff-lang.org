@@ -1,7 +1,7 @@
 baseURL = "https://bunny-lang.org/"
 theme = "bunny-theme"
-title = "Bunny Programming Language"
-author = "omar"
+title = "Bunny"
+author = "rgrmrts"
 copyright = "Copyright © 2020, Bunny Programming Language."
 languageCode = "en-US"
 enableRobotsTXT = true
