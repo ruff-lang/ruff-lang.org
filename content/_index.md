@@ -13,7 +13,7 @@ It is inspired by classic Lisps like Common Lisp and Scheme, modern Lisps like C
 - **Minimal and Modern Syntax**, striving for elegance and expressivity.
 - **Functional**, as in functions are values.
 - **Tail-Call Optimized**, recursion without the overhead.
-- **Garbage-Collected**, using a mark-and-sweep algorithm.
+- **Garbage-Collected**.
 - **Hygienic Macros**.
 - **Continuations**, as a first-class language feature.
 - **Concurrent**, with fibers and channels.
