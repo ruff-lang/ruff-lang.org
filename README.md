@@ -33,3 +33,7 @@ Total in 35 ms
 ```
 
 This will generate the static site under the folder `public`.
+
+# License
+
+
