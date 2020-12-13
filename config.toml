@@ -1,6 +1,6 @@
 baseURL = "https://bunny-lang.org/"
 theme = "bunny-theme"
-title = "Bunny"
+title = "Bunny Programming Language"
 author = "omar"
 copyright = "Copyright © 2020, Bunny Programming Language."
 languageCode = "en-US"
