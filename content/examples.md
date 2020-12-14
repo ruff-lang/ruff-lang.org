@@ -14,7 +14,3 @@ This page contains code examples of Bunny, listed out in increasing complexity.
 ```
 (println "Hello, World!")
 ```
-
-### ...
-
-More examples to be added later.
