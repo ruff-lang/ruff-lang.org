@@ -86,7 +86,7 @@ The underlying representation for a list is a cons pair as described below:
 
 List are always evaluated, but it's often useful to work with and manipulate them without evaluation. This is done using the concept of quoting. The following examples show some basic examples.
 
-```scheme
+```
 ;; The following is evaluated
 (+ 1 2)
 => 3
@@ -390,7 +390,7 @@ This should setup a directory `<carrot_name>` with the skeleton for a new carrot
 
 `<carrot_name>.bn` file:
 
-```scheme
+```
 (namespace <carrot_name>)
 (export [magic-number
          foo])
@@ -416,7 +416,7 @@ This will automatically add the dependency to the `carrots.bn` file.
 
 Functions in `<carrot_name>.bn` can be used after importing, below is usage based on the above example for [Creating a Library](#creating-a-library).
 
-```scheme
+```
 (<carrot_name>/foo "rabbits are cool and stuff")
 (<carrot_name>/magic-number)  ; This will evaluate to 42.
 
