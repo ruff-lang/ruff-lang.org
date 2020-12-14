@@ -13,6 +13,6 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 [params]
   description = "The Bunny Programming Language"
-  favicon = "images/favicon.png"
-  images = ["images/share.png"]
+  favicon = "favicon.png"
+  images = ["images/logo.png"]
   title = "bunny"
