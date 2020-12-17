@@ -1,17 +1,16 @@
 <style>
   body {
-      /* font-family: "Ubuntu Mono", Menlo, "DejaVu Sans Mono"; */
+      background-color: #fff;
+      color: #4a4a4a;
       font-family: "Open Sans", sans-serif;
       font-size: 14px;
-      margin: auto;
-      padding: 20px;
-      max-width: 720px;
-      text-align: left;
-      background-color: #fff;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
       line-height: 1.5;
-      color: #4a4a4a;
+      margin: auto;
+      max-width: 720px;
+      overflow-wrap: break-word;
+      padding: 20px;
+      text-align: left;
+      word-wrap: break-word;
   }
 
   h1,
@@ -96,10 +95,11 @@
   }
 
   pre code {
-      padding: 20px;
-      overflow-x: scroll;
-      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
       display: block;
+      overflow-x: scroll;
+      padding: 20px;
+      white-space: pre-wrap;
   }
 
   blockquote {
