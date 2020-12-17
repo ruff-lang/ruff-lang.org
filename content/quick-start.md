@@ -5,4 +5,6 @@ menu: "main"
 weight: 1
 ---
 
+## Quick Start
+
 Bunny is under active design and development. Everything during development is at https://github.com/bunny-lang/implementation.
