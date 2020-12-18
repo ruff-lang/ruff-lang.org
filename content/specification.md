@@ -9,6 +9,14 @@ weight: 20
 
 This is the canonical specification for the Bunny programming language. Contents below this line are copied directly from https://github.com/bunny-lang/specification.
 
+**NOTE:** This spec needs a lot of work and will be entirely re-done.
+
+TODO:
+- [ ] Re-do section on namespaces, switch to a module system and think through design details.
+- [ ] This spec reads somewhere between a spec and documentation, it should be less terse (and documentation should be more verbose).
+- [ ] Remove conventions and style-guide from spec, some things make sense but others don't.
+- [ ] Adding tooling to the spec is premature, consider removing from spec.
+
 ---
 
 ## Table Of Contents
