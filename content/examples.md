@@ -25,5 +25,6 @@ Below is a variant that will ask the user for input.
 
 // read-from-stdin will wait for the user
 (let ((name read-from-stdin))
-    (println (join "Hello, " name "!")))
+    // the familiar printf format string
+    (println (sprintf "Hello, %s!" name)))
 ```
