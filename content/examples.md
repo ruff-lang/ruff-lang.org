@@ -17,3 +17,13 @@ Printing to standard output is a pretty common thing for languages to do. Here's
 // println appends a newline character and prints to stdout
 (println "Hello, World!")
 ```
+
+Below is a variant that will ask the user for input.
+
+```
+(println "What is your name?")
+
+// read-from-stdin will wait for the user
+(let ((name read-from-stdin))
+    (println (join "Hello, " name "!")))
+```
