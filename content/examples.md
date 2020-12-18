@@ -11,8 +11,9 @@ This page contains code examples of Bunny, listed out in increasing complexity.
 
 ### Hello, World!
 
-Classic and useless example program. When run, this will print "Hello, World!" to standard output.
+Printing to standard output is a pretty common thing for languages to do. Here's the classic `Hello World` program.
 
 ```
+// println appends a newline character to its argument and prints it to standard output
 (println "Hello, World!")
 ```
