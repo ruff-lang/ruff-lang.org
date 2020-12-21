@@ -1,6 +1,5 @@
 ---
 title: "Quick Start"
-date: 2020-12-14T18:30:29-05:00
 menu: "main"
 weight: 1
 ---
