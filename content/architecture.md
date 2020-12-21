@@ -15,4 +15,32 @@ Language design is generally broken into a few components. The **frontend** is r
 
 Below is a visual representation of the Bunny implementation.
 
-![bunny](/images/compiler.png)
+```
++----------+   \
+|  Lexer   |    |
++----------+    |
+     |          |
++----------+    |
+|  Parser  |    |-- Frontend
++----------+    |
+     |          |
++----------+    |
+|   AST    |    |
++----------+   /
+     |
++----------+   \
+|  Pass 0  |    |
++----------+    |
+     |          |-- Core Compiler (Middle-end)
++----------+    |
+|  Pass N  |    |
++----------+   /
+     |
++----------+   \
+| Bytecode |    |-- Code Generation (Backend)
++----------+   /
+     |
++----------+   \
+|    VM    |    |-- Execution/Runtime
++----------+   /
+```
