@@ -24,7 +24,7 @@ Below is a variant that will ask the user for input.
 (println "What is your name?")
 
 // read-from-stdin will wait for the user
-(let ((name read-from-stdin))
+(let ((name readline))
   // the familiar printf format string
   (println (sprintf "Hello, %s!" name)))
 ```
@@ -37,5 +37,6 @@ Function to compute the `nth` number in the [Fibonacci sequence](https://en.wiki
 (define (fib n)
   (if (<= n 2)
     1
-    (+ (fib (- n 1)) (fib (- n 2)))))
+    (+ (fib (- n 1))
+       (fib (- n 2)))))
 ```
