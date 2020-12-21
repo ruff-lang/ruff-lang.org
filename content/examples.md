@@ -25,6 +25,17 @@ Below is a variant that will ask the user for input.
 
 // read-from-stdin will wait for the user
 (let ((name read-from-stdin))
-    // the familiar printf format string
-    (println (sprintf "Hello, %s!" name)))
+  // the familiar printf format string
+  (println (sprintf "Hello, %s!" name)))
+```
+
+### Fibonacci Sequence
+
+Function to compute the `nth` number in the [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_number).
+
+```
+(define (fib n)
+  (if (<= n 2)
+    1
+    (+ (fib (- n 1)) (fib (- n 2)))))
 ```
