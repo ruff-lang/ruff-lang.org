@@ -34,7 +34,7 @@ Function to compute the `nth` number in the [Fibonacci sequence](https://en.wiki
 
 ```
 (define (fib n)
-  (if (<= n 2)
+  (if (< n 2)
     1
     (+ (fib (- n 1))
        (fib (- n 2)))))
