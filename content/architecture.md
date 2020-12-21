@@ -8,9 +8,9 @@ weight: 30
 
 This page is dedicated to documenting the internals and the implementation details of the Bunny language. Once implementation is nearing completion, this page will include high-level overview of the compiler and runtime and dive deeper into the specifics.
 
-### Stages
+### Overview
 
-Language design is generally broken into a few components.
+Language architecture is generally broken into a few components.
 
 The **frontend** is responsible for taking what looks like code in a file (or from a REPL) and convert it into something (Abstract Syntax Tree, or AST) we can easily transform.
 
@@ -49,3 +49,35 @@ Below is a visual representation of the Bunny implementation.
 |    VM    |    |-- Execution/Runtime
 +----------+   -+
 ```
+
+### Lexer
+
+todo...
+
+### Parser
+
+todo...
+
+### Abstract Syntax Tree
+
+todo...
+
+### Compiler Passes
+
+todo...
+
+### Bytecode
+
+todo...
+
+### (Byte)code Generation
+
+todo...
+
+### Virtual Machine
+
+todo...
+
+### Runtime
+
+todo...
