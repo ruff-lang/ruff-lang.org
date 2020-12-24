@@ -339,7 +339,7 @@ It can be useful to have a looping construct matching on multiple channels. `sel
     (println (sprintf "received from bar-chan: %s" msg))
   (error-chan nil
     (println "got an error, exiting")
-    (exit)))
+    (done)))
 ```
 
 We specify the channel, a locally scoped variable to put the received item from the channel into (`nil` if not needed), and a body specifying what to do when that channel receives an item.
