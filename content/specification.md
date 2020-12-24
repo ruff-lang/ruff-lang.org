@@ -21,12 +21,12 @@ An `atom` is a singular piece of data.
 |**Atom** |**Semantic Meaning**|
 |---------|--------------------|
 |symbol   | A symbol is a word or an operator, for example `foo` is a symbol and so is `+` |
-|keyword  | A keyword is like a symbol that is exported and evaluates to itself, for example `:foo` is a keyword |
+|keyword  | A keyword is like a symbol that evaluates to itself, for example `:foo` is a keyword |
 |boolean  | `true` is a symbol representing the truthy boolean. `false` is an aliased symbol representing falsity (the underlying implementation for falsity is `nil`) |
 |number   | Any integer, or floating point integer for example `1`, `19`, `3.14159265` |
 |character| Any letter prepended with a backslash, for example `\a` represents the first letter of the english alphabet. |
 
-### Cons Cell
+### Cons Cell (Pairs)
 
 Fundamental data type in Bunny. A cons cell is a pair of two things. The first element is called the `head` and the second element is called the `tail` and is a pointer to another cons cell. `nil` terminates a sequence of cons cells.
 
@@ -35,9 +35,9 @@ Fundamental data type in Bunny. A cons cell is a pair of two things. The first e
 | head | tail |
 +------+------+
    |      |
-   |      |__ this holds a pointer to another cons cell
+   |      |__ this holds a pointer to another pair or nil
    |
-   |__ this holds an atom
+   |__ this holds an atom or a pair
 ```
 
 Syntax to build cons cells is `(cons <head> <tail>)`. Dotted-pair notation is syntactic sugar, `(<head> . <tail>)`.
@@ -54,7 +54,7 @@ Lists are arbitrarily long sequences of cons cells. Data structures formed with 
 
 `()` is the empty list and is equivalent to `nil`.
 
-Lists are always evaluates unless explicitly quoted. Quoting stops evaluation. Lists can be quoted with `(quote <list>)` or the syntactic sugared form, `'(<list>)`.
+Lists are always evaluated unless explicitly quoted. Quoting stops evaluation. Lists can be quoted with `(quote <list>)` or the syntactic sugared form, `'(<list>)`.
 
 ```
 (+ 1 2)
@@ -198,10 +198,10 @@ And then invoke it:
 => 2
 ```
 
-A special short-hand form for `define` is a convenient way to define named functions with arguments. `(define (<function_name> <arguments>) (<expression>))`. The same `incr` function defined using the `define` short-hand form below.
+A special short-hand form `defun` is a convenient way to define named functions with arguments. `(defun <function_name> (<arguments>) (<expression>))`. The same `incr` function defined using the `defun` short-hand form below.
 
 ```
-(define (incr x)
+(defun incr (x)
   (+ x 1))
 ```
 
@@ -348,7 +348,7 @@ We specify the channel, a locally scoped variable to put the received item from 
 
 Modules provide a way of organizing and grouping code together. They also provide a convenient way to distinguish between code meant to be shared or exposed (in the case of a library) and code meant for internal use only.
 
-A module can be defined to explicitly export a list of public functions. Otherwise, all definitions inside the module will be implicitly exported. We can define a new module using `defmodule`, and tell the language where we're implementing that module with `implement`. Note that both the module definition and the implement directive can be in the same file.
+A module can be defined to only explicitly export a list of public functions. Otherwise, all definitions inside the module will be implicitly exported. We can define a new module using `defmodule`, and tell the language where we're implementing that module with `implement`. Note that both the module definition and the implement directive can be in the same file.
 
 ```
 // mod.bn
@@ -363,8 +363,9 @@ A module can be defined to explicitly export a list of public functions. Otherwi
 
 (implement Utilities)
 
-(define (print-uppercase arg)
-  (String.upper arg))
+(defun print-uppercase (arg)
+  (let ((uppercase (String.upper arg)))
+    (println uppercase)))
 ```
 
 In another file this module can be used.
@@ -390,7 +391,7 @@ Alternatively, a file containing definitions _not_ in a module can be imported f
 ```
 // helpers.bn
 
-(define (roll-dice)
+(defun roll-dice ()
   (Random.pick '(1 2 3 4 5 6))
 ```
 
@@ -406,3 +407,7 @@ and import in another using relative path:
 ```
 
 If `application.bn` already defines a symbol in `helpers.bn`, `import` will throw an error at build time.
+
+### Macros
+
+TODO...
