@@ -24,7 +24,7 @@ Below is a variant that will ask the user for input.
 
 // readline will wait for user input
 (let ((name readline))
-  (println (Printf.sprintf "Hello, %s!" name)))
+  (println (format "Hello, %s!" name)))
 ```
 
 ### Fibonacci Sequence
