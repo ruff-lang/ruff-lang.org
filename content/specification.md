@@ -73,7 +73,7 @@ Inside a quoted form, we can resume evaluation selectively. This is called unquo
 (quote (+ 1 (unquote (+ 2 3))))
 => (+ 1 5)
 
-// equivalent, using syntactic sugar
+# equivalent, using syntactic sugar
 '(+ ~(+ 2 3))
 => (+ 1 5)
 ```
@@ -87,7 +87,7 @@ Forms can be unquoted (`unquote-splice`) into the position in the quoted templat
 (quote (1 2 (unquote-splice (list 3 4))))
 => (1 2 3 4)
 
-// equivalent, using syntactic sugar
+# equivalent, using syntactic sugar
 '(1 2 @(list 3 4))
 => (1 2 3 4)
 ```
@@ -108,19 +108,19 @@ Forms can be unquoted (`unquote-splice`) into the position in the quoted templat
 
 ### Comments
 
-Comments in Bunny are specified with two forward-slashes `//`.
+Comments in Bunny are specified with a single hashtag, `#`.
 
 ```
-// this is a comment
+# this is a comment
 
-// this is a comment that
-// spans multiple lines
+# this is a comment that
+# spans multiple lines
 ```
 
 In-line comments should have two whitespaces preceding.
 
 ```
-(+ 1 2)  // add one and two
+(+ 1 2)  # add one and two
        ^^
    whitespace
 ```
@@ -150,9 +150,8 @@ Variables can be lexically scoped using `let` and then used within the scoped ex
 Multiple bindings can be used.
 
 ```
-(let ((foo 1)
-      (bar 2))
-  (+ foo bar))
+(let ((foo 1) (bar 2))
+    (+ foo bar))
 => 3
 ```
 
@@ -161,7 +160,7 @@ Multiple bindings can be used.
 ```
 (let ((foo 2)
       (bar (* foo foo)))
-  (+ foo bar))
+    (+ foo bar))
 => 6
 ```
 
@@ -179,16 +178,16 @@ Since functions are values, and we use `define` to give names to values, we can 
 
 ```
 (define <function_name>
-  (λ (<arguments>)
-    (<expression>)))
+    (λ (<arguments>)
+        (<expression>)))
 ```
 
 For example, we can define the function `incr` that increments a given integer.
 
 ```
 (define incr
-  (λ (x)
-    (+ x 1)))
+    (λ (x)
+        (+ x 1)))
 ```
 
 And then invoke it:
@@ -202,7 +201,7 @@ A special short-hand form `defun` is a convenient way to define named functions 
 
 ```
 (defun incr (x)
-  (+ x 1))
+    (+ x 1))
 ```
 
 ### Conditionals
@@ -213,34 +212,32 @@ Basic conditional logic forms in Bunny are pretty similar to Scheme. Below are t
 
 ```
 (if (< 1 0)
-  "condition met"
-  "condition failed")
+    "condition met"
+    "condition failed")
 => "condition failed"
 ```
 
 `when` is a macro that expands to `(if (<condition>) (<true_expression>) (nil))`. It is preferred when there's no `else` clause needed.
 
 ```
-(when (< 1 2)
-  "condition met")
+(when (< 1 2) "condition met")
 => "condition met"
 
-(when (< 1 2)
-  "condition met")
+(when (< 1 2) "condition met")
 => nil
 ```
 
 `cond` blocks are a slightly more generic way to construct multiple conditions, they take the form `(cond (<conditional_0>) (<expression_0>) ... (<conditional_n>) (<expression_n>))`.
 
 ```
-// Assume x is bound or supplied by a function argument, this
-// condition will return a string based on the value of x.
+# Assume x is bound or supplied by a function argument, this
+# condition will return a string based on the value of x.
 (cond ((< x 10) "less than 10")
       ((< x 100) "less than 100")
       (else "no conditions met"))
 
-// If no result expression is given, the condition block will
-// return the result of the conditional expression.
+# If no result expression is given, the condition block will
+# return the result of the conditional expression.
 (cond ((< 1 10)))
 => true
 ```
@@ -275,11 +272,11 @@ Basic conditional logic forms in Bunny are pretty similar to Scheme. Below are t
 
 ```
 (unless (even? 2)
-  "not even"
-  "even")
+    "not even"
+    "even")
 => "even"
 
-// unless can be used without a second clause making it an implicit nil
+# unless can be used without a second clause making it an implicit nil
 (unless (odd? 2) "not odd")
 => "not odd"
 
@@ -295,18 +292,18 @@ You can start a new concurrent task with `fiber`.
 
 ```
 (fiber
-  (while true
-    (sleep 10)
-    (println "brr")))
+    (while true
+        (sleep 10)
+        (println "brr")))
 ```
 
 Tasks can be exited out with `(done)`. Every fiber implicitly has a reference to its parent fiber, and as such can invoke the `(done? parent)` method to detect if the parent exited out.
 
 ```
 (fiber
-  (while true
-    (cond ((done? parent) (done))
-          (else (println "brr")))))
+    (while true
+        (cond ((done? parent) (done))
+              (else (println "brr")))))
 ```
 
 Channels can be created with `chan`.
@@ -325,21 +322,21 @@ Things can be added to a channel with `send`.
 
 ```
 (while true
-  (let ((msg (recv test-channel)))
-    (println (format "received a new mesage: %s" msg))))
+    (let ((msg (recv test-channel)))
+        (println (format "received a new mesage: %s" msg))))
 ```
 
 It can be useful to have a looping construct matching on multiple channels. `select` allows you to match on multiple channels. `(select (<channel_0> <message_0> <body_0>) ... (<channel_n> <message_n> <body_n>))`.
 
 ```
 (select
-  (foo-chan msg
-    (println (format "received from foo-chan: %s" msg))
-  (bar-chan msg
-    (println (format "received from bar-chan: %s" msg))
-  (error-chan nil
-    (println "got an error, exiting select loop")
-    (done)))
+    (foo-chan msg
+        (println (format "received from foo-chan: %s" msg))
+    (bar-chan msg
+        (println (format "received from bar-chan: %s" msg))
+    (error-chan nil
+        (println "got an error, exiting select loop")
+        (done)))
 ```
 
 We specify the channel, a locally scoped variable to put the received item from the channel into (`nil` if not needed), and a body specifying what to do when that channel receives an item.
@@ -351,21 +348,21 @@ Modules provide a way of organizing and grouping code together. They also provid
 A module can be defined to only explicitly export a list of public functions. Otherwise, all definitions inside the module will be implicitly exported. We can define a new module using `defmodule`, and tell the language where we're implementing that module with `module`. Note that both the module definition and the implement directive can be in the same file.
 
 ```
-// mod.bn
+# mod.bn
 
 (defmodule Utilities
-  (export (print-uppercase
-           print-lowercase)))
+    (export (print-uppercase
+             print-lowercase)))
 ```
 
 ```
-// utilities.bn
+# utilities.bn
 
 (module Utilities)
 
 (defun print-uppercase (arg)
-  (let ((uppercase (String.upper arg)))
-    (println uppercase)))
+    (let ((uppercase (String.upper arg)))
+        (println uppercase)))
 ```
 
 In another file this module can be used.
@@ -389,16 +386,16 @@ If a symbol is already defined leading to a name conflict, `(use <module>)` will
 Alternatively, a file containing definitions _not_ in a module can be imported for use. Define in one file:
 
 ```
-// helpers.bn
+# helpers.bn
 
 (defun roll-dice ()
-  (Random.pick '(1 2 3 4 5 6))
+    (Random.pick '(1 2 3 4 5 6))
 ```
 
 and import in another using relative path:
 
 ```
-// application.bn
+# application.bn
 
 (import "helpers.bn")
 
