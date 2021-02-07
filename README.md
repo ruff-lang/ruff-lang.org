@@ -37,4 +37,4 @@ This will generate the static site under the folder `public`.
 
 # License
 
-MIT. See [LICENSE](LICENSE).
+MPL-2.0, See [LICENSE](LICENSE).
