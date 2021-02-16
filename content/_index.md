@@ -18,8 +18,7 @@ Below is a list of features planned for the first stable release of Bunny which 
 - **Garbage-Collected**.
 - **Hygienic Macros**.
 - **Continuations**, as a first-class language feature.
-- **Concurrent**, CSP with fibers and channels.
+- **Concurrent**, lightweight with fibers and queues for message passing.
 - **Batteries Included**, to be a complete and productive tool.
-- **Integrated Tooling**, ships as a single binary with all tools.
 
 [^1]: this obviously comes down to personal preference, and yours might differ.
