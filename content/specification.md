@@ -309,8 +309,7 @@ Fibers can be exited out with `(done)`. Every fiber implicitly has a reference t
 Queues can be created with `queue`.
 
 ```
-(let ((q (queue)))
-  <body>)
+(define some-queue (queue))
 ```
 
 Things can be added to a queue with `put`.
@@ -347,6 +346,8 @@ We can put an error on the queue as a signal to a fiber to terminate. Here's an 
    "received: hello again!"
    nil
 ```
+
+Note that using `define` will create a queue in the global scope and will not be garbage collected. Using `let` will clean up the queue resources once that bound variable is no longer referenced.
 
 ### Modules
 
