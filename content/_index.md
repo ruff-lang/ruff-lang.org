@@ -17,7 +17,6 @@ Below is a list of features planned for the first stable release of Bunny which 
 - **Tail-Call Optimized**, recursion without the overhead.
 - **Garbage-Collected**.
 - **Hygienic Macros**.
-- **Continuations**, as a first-class language feature.
 - **Concurrent**, lightweight with fibers and queues for message passing.
 - **Batteries Included**, to be a complete and productive tool.
 
