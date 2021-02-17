@@ -284,6 +284,10 @@ Basic conditional logic forms in Bunny are pretty similar to Scheme. Below are t
 => nil
 ```
 
+### Errors
+
+TODO...
+
 ### Concurrency
 
 Lightweight threads are used for concurrency, also known as coroutines, green threads, and fibers. The runtime handles all concurrency tasks and exposes a simple interface with fibers. Messages can be shared across fibers using queues.
@@ -297,13 +301,13 @@ You can start a new concurrent task with `fiber`.
     (println "brr")))
 ```
 
-Fibers can be exited out with `(done)`. Every fiber implicitly has a reference to its parent fiber, and as such can invoke the `(done? parent)` method to detect if the parent exited out.
+Fibers can be exited out with `(done)`. Every fiber implicitly has a reference to its parent fiber, and as such can invoke the `parent-done?` method to detect if the parent exited out.
 
 ```
 (fiber
   (while true
-    (when (done? parent) (done))
-    (println "brr")))
+    (when (parent-done?) (done))
+	(println "brr")))
 ```
 
 Queues can be created with `queue`.
@@ -315,25 +319,23 @@ Queues can be created with `queue`.
 Things can be added to a queue with `put`.
 
 ```
-(let ((q queue))
-  (put q "foo"))
+(put some-queue "foo")
 ```
 
 And things can be taken off a queue with `take`, which blocks until the queue has something on it.
 
 ```
-(while true
-  (let ((msg (take q)))
-    (println (format "got message: %s" msg))))
+(let ((msg (take some-queue)))
+  (println (format "got message: %s" msg))))
 ```
 
 We can put an error on the queue as a signal to a fiber to terminate. Here's an example of a fiber that prints messages received til it sees an error.
 
 ```
-(let ((q (queue)))
+(let ((msgs (queue)))
   (fiber 
     (while true
-      (let ((msg (take q)))
+      (let ((msg (take msgs)))
         (when (error? msg) (done))
         (println (format "received: %s" msg))))))
   (put q "hello")
