@@ -27,6 +27,20 @@ Below is a variant that will ask the user for input.
   (println (format "Hello, %s!" name)))
 ```
 
+### Factorial
+
+Below is a tail-recursive implementation of the factorial function:
+
+```
+(defun factorial (n)
+  (factorial-tail-recursive n 1))
+
+(defun factorial-tail-recursive (n accumulator)
+  (if (= n 0)
+    accumulator
+	(factorial-tail-recursive (- n 1) (* n accumulator))))
+```
+
 ### Fibonacci Sequence
 
 Function to compute the `nth` number in the [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_number).
