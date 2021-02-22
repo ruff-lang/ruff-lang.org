@@ -38,7 +38,7 @@ Below is a tail-recursive implementation of the factorial function:
 (defun factorial-tail-recursive (n accumulator)
   (if (= n 0)
     accumulator
-	(factorial-tail-recursive (- n 1) (* n accumulator))))
+    (factorial-tail-recursive (- n 1) (* n accumulator))))
 ```
 
 ### Fibonacci Sequence
