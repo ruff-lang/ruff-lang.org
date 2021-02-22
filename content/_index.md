@@ -6,9 +6,9 @@ It is inspired by classic Lisps like [Common Lisp](https://common-lisp.net/) and
 
 ## Why
 
-Bunny is a personal side-project, but I hope for it to be more than just a toy. My motivation is to produce a concrete language specification with wish-list features from its inspirations and to bundle this set features into a cohesive and enjoyable[^1] language.
+My motivation is to produce a concrete language specification with wish-list features from its inspirations and to bundle this set features into a cohesive and enjoyable[^1] language.
 
-Most importantly, this is an academic venture and a vehicle for me to explore new found curiosities in the world of programming language theory and design.
+Most importantly, this is a passion project and a vehicle for me to explore new found curiosities in the world of programming language theory and design.
 
 ## How
 
@@ -25,10 +25,11 @@ Below is a list of features planned for the first stable release of Bunny which 
 - **Concurrent**, lightweight with fibers and queues for message passing.
 - **Batteries Included**, to be a complete and productive tool.
 
+## When
+
+Bunny's [specification](https://bunny-lang.org/specification/) is in early design and iteration phase. I began researching towards the end of 2020, and while a stable release is rather far I aim to have work to show by the end of 2021. Ultimately, I hope for it to be more than just a toy.
+
+
 [^1]: this obviously comes down to personal preference, and yours might differ.
 [^2]: fast as in boot, compile, and execution times.
 [^3]: see [this link](http://www.gigamonkeys.com/book/beyond-exception-handling-conditions-and-restarts.html) for more information.
-
-## When
-
-Bunny's [specification](https://bunny-lang.org/specification/) is in an early design and iteration phase. Research on it began towards the end of 2020, and while a stable release is rather far I aim to start implementation with work to show by the end of 2021.
