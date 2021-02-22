@@ -22,31 +22,7 @@ The result can then be run by a virtual machine in the case of bytecode, assembl
 
 Below is a rough design of the Bunny implementation.
 
-```
-+----------+   -+
-|  Lexer   |    |
-+----------+    |
-     |          |
-+----------+    |
-|  Parser  |    |-- Frontend
-+----------+    |
-     |          |
-+----------+    |
-|   AST    |    |
-+----------+   -+
-     |
-+----------+   -+
-|  Pass 0  |    |
-+----------+    |
-     |          |-- Core Compiler (Middle-end)
-+----------+    |
-|  Pass N  |    |
-+----------+   -+
-     |
-+-------------+   -+
-| Native Code |    |-- Code Generation (Backend)
-+-------------+   -+
-```
+![](/images/bunny-compiler-architecture.png)
 
 ### Lexer
 
