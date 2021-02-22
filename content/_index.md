@@ -1,12 +1,12 @@
 ## What
 
-Bunny (_bunny_, not _bunny lang_) is a simple, practical, and fun[^1] general purpose dynamic programming language.
+Bunny (_bunny_, not _bunny lang_) is a simple, practical, and fun[^1] general purpose programming language designed to be user friendly and productive.
 
 ## Why
 
 The motivation is to produce a concrete language specification with wish-list features from its inspirations and to bundle this set of developer-friendly features into a cohesive and enjoyable[^1] language.
 
-It is inspired by classic Lisps like [Common Lisp](https://common-lisp.net/) and [Scheme](https://schemers.org/), modern Lisps like [Clojure](https://clojure.org/), dynamic and general purpose languages like [Ruby](https://www.ruby-lang.org/en/) and [Python](https://www.python.org/), and the elegant concurrency of [Go](https://golang.org/).
+It is inspired by classic Lisps like [Common Lisp](https://common-lisp.net/) and [Scheme](https://schemers.org/), modern Lisps like [Clojure](https://clojure.org/), dynamic and general purpose languages like [Ruby](https://www.ruby-lang.org/en/) and [Python](https://www.python.org/), the elegant concurrency patterns of [Go](https://golang.org/), and the (implicit) type system of [OCaml](https://ocaml.org/).
 
 ## How
 
@@ -14,10 +14,15 @@ Below is a list of features planned for the first stable release of Bunny which 
 
 - **Minimal and Modern Syntax**, elegant[^1] and expressive.
 - **Functional**, as in functions are values.
+- **Statically Typed**, implicitly without the boilerplate.
+- **Reasonably Fast**[^2], with an incremental native-code compiler.
 - **Tail-Call Optimized**, recursion without the overhead.
-- **Garbage-Collected**.
-- **Hygienic Macros**.
+- **Garbage-Collected**, effort free memory management.
+- **Condition System**, an advanced way to deal with errors[^3].
+- **Hygienic Macros**, enabling the full power/fun of macros.
 - **Concurrent**, lightweight with fibers and queues for message passing.
 - **Batteries Included**, to be a complete and productive tool.
 
 [^1]: this obviously comes down to personal preference, and yours might differ.
+[^2]: fast as in boot, compile, and execution times.
+[^3]: see [this link](http://www.gigamonkeys.com/book/beyond-exception-handling-conditions-and-restarts.html) for more information.
