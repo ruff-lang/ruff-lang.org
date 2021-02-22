@@ -16,9 +16,11 @@ The **frontend** is responsible for taking what looks like code in a file (or fr
 
 The **middle-end**, or what I'm calling the **core**, is a set of transformations made on the the AST generally consisting of some simple source-to-source transformations and potentially some optimizations.
 
-After that, the **backend** will take the transformed AST and generate code that can then be run. This can be bytecode, assembly, binary machine code, or even another language. The result can then be run by a virtual machine in the case of bytecode, assembled in the case of assembly, run directly in the case of binary machine code, or compiled with another compiler if the end result was another language.
+After that, the **backend** will take the transformed AST and generate code that can then be run. This can be bytecode, assembly, binary machine code, or even another language. 
 
-Below is a visual representation of the Bunny implementation.
+The result can then be run by a virtual machine in the case of bytecode, assembled in the case of assembly, run directly in the case of binary machine code, or compiled with another compiler if the end result was another language.
+
+Below is a rough design of the Bunny implementation.
 
 ```
 +----------+   -+
@@ -41,13 +43,9 @@ Below is a visual representation of the Bunny implementation.
 |  Pass N  |    |
 +----------+   -+
      |
-+----------+   -+
-| Bytecode |    |-- Code Generation (Backend)
-+----------+   -+
-     |
-+----------+   -+
-|    VM    |    |-- Execution/Runtime
-+----------+   -+
++-------------+   -+
+| Native Code |    |-- Code Generation (Backend)
++-------------+   -+
 ```
 
 ### Lexer
@@ -66,18 +64,6 @@ todo...
 
 todo...
 
-### Bytecode
-
-todo...
-
-### (Byte)code Generation
-
-todo...
-
-### Virtual Machine
-
-todo...
-
-### Runtime
+### Code Generation
 
 todo...
