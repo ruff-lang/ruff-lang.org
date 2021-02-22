@@ -22,7 +22,7 @@ The result can then be run by a virtual machine in the case of bytecode, assembl
 
 Below is a rough design of the Bunny implementation.
 
-![](/images/bunny-compiler-architecture.png)
+![](/images/bunny-compiler-architecture.svg)
 
 ### Lexer
 
