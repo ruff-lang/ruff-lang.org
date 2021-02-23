@@ -27,7 +27,7 @@ Below is a list of features planned for the first stable release of Bunny which 
 
 ## When
 
-Bunny's [specification](https://bunny-lang.org/specification/) is in early design and iteration phase. I began researching towards the end of 2020, and while a stable release is rather far I aim to have work to show by the end of 2021. Ultimately, I hope for it to be more than just a toy.
+Bunny's [specification](https://bunny-lang.org/specification/) is in early design and iteration phase. I began research towards the end of 2020, and while a stable release is rather far I aim to have work to show by the end of 2021. Ultimately, I hope for it to be more than just a toy.
 
 
 [^1]: this obviously comes down to personal preference, and yours might differ.
