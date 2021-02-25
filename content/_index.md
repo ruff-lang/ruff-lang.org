@@ -17,10 +17,7 @@ Below is a list of features planned for the first stable release of Bunny which 
 - **Minimal and Modern Syntax**, elegant[^1] and expressive.
 - **Functional**, as in functions are values.
 - **Statically Typed**, implicitly without the boilerplate.
-- **Reasonably Fast**[^2], with an incremental machine code compiler.
-- **Tail-Call Optimized**, recursion without the overhead.
 - **Garbage-Collected**, effort free memory management.
-- **Condition System**, an advanced way to deal with errors[^3].
 - **Hygienic Macros**, enabling the full power/fun of macros.
 - **Concurrent**, lightweight with fibers and queues for message passing.
 - **Batteries Included**, to be a complete and productive tool.
@@ -31,5 +28,3 @@ Bunny's [specification](https://bunny-lang.org/specification/) is in early desig
 
 
 [^1]: this obviously comes down to personal preference, and yours might differ.
-[^2]: fast as in boot, compile, and execution times.
-[^3]: see [this link](http://www.gigamonkeys.com/book/beyond-exception-handling-conditions-and-restarts.html) for more information.
