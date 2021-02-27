@@ -285,6 +285,12 @@ Basic conditional logic forms in Bunny are pretty similar to Scheme. Below are t
 
 TODO...
 
+### Type System
+
+Bunny is a statically typed language without burdening the user with manually annotated types using [Hindley-Milner](https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system) type-system for type inference.
+
+TODO...
+
 ### Concurrency
 
 Lightweight threads are used for concurrency, also known as coroutines, green threads, and fibers. The runtime handles all concurrency tasks and exposes a simple interface with fibers. Messages can be shared across fibers using queues.
@@ -304,7 +310,7 @@ Fibers can be exited out with `(done)`. Every fiber implicitly has a reference t
 (fiber
   (while true
     (when (parent-done?) (done))
-	(println "brr")))
+    (println "brr")))
 ```
 
 Queues can be created with `queue`.
