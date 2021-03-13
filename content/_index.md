@@ -2,7 +2,7 @@
 
 Bunny (_bunny_, not _bunny lang_) is a simple, practical, and fun[^1] general purpose programming language designed to be user friendly and productive. 
 
-It is inspired by classic Lisps like [Common Lisp](https://common-lisp.net/) and [Scheme](https://schemers.org/), modern Lisps like [Clojure](https://clojure.org/), dynamic languages like [Ruby](https://www.ruby-lang.org/en/) and [Python](https://www.python.org/), the concurrency patterns of [Go](https://golang.org/), and the type system of [OCaml](https://ocaml.org/).
+It is inspired by classic Lisps like [Common Lisp](https://common-lisp.net/) and [Scheme](https://schemers.org/), modern Lisps like [Clojure](https://clojure.org/), dynamic languages like [Ruby](https://www.ruby-lang.org/en/) and [Python](https://www.python.org/), the concurrency patterns of [Go](https://golang.org/), and the module system of [OCaml](https://ocaml.org/).
 
 ## Why
 
@@ -16,7 +16,6 @@ Below is a list of features planned for the first stable release of Bunny which 
 
 - **Minimal and Modern Syntax**, elegant[^1] and expressive.
 - **Functional**, as in functions are values.
-- **Statically Typed**, implicitly without the boilerplate.
 - **Garbage-Collected**, effort free memory management.
 - **Hygienic Macros**, enabling the full power/fun of macros.
 - **Concurrent**, lightweight with fibers and queues for message passing.
