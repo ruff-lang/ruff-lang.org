@@ -33,12 +33,12 @@ Below is a tail-recursive implementation of the factorial function:
 
 ```
 (defun factorial (n)
-  (factorial-tail-recursive n 1))
+  (fact_tail_rec n 1))
 
-(defun factorial-tail-recursive (n accumulator)
+(defun fact_tail_rec (n acc)
   (if (= n 0)
-    accumulator
-    (factorial-tail-recursive (- n 1) (* n accumulator))))
+    acc
+    (fact_tail_rec (- n 1) (* n acc))))
 ```
 
 ### Fibonacci Sequence
