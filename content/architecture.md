@@ -20,7 +20,7 @@ After that, the **backend** will take the transformed AST and generate code that
 
 The result can then be run by a virtual machine in the case of bytecode, assembled in the case of assembly, run directly in the case of binary machine code, or compiled with another compiler if the end result was another language.
 
-Below is a rough design of the Bunny implementation.
+Below is a roughly what most compilers look like.
 
 ![](/images/bunny-compiler-architecture.svg)
 
