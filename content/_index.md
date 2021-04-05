@@ -1,6 +1,6 @@
 ## What
 
-Bunny (_bunny_, not _bunny lang_) is a simple, practical, and fun[^1] general purpose programming language designed to be user friendly and productive. 
+Bunny (_bunny_, not _bunny lang_) is a simple, practical, and fun[^1] general purpose programming language designed to be user friendly and productive.
 
 It is inspired by classic Lisps like [Common Lisp](https://common-lisp.net/) and [Scheme](https://schemers.org/), modern Lisps like [Clojure](https://clojure.org/), dynamic languages like [Ruby](https://www.ruby-lang.org/en/) and [Python](https://www.python.org/), the concurrency patterns of [Go](https://golang.org/), and the module system of [OCaml](https://ocaml.org/).
 
@@ -24,7 +24,7 @@ Below is a list of features planned for the first stable release of Bunny which 
 
 ## When
 
-Bunny's [specification](https://bunny-lang.org/specification/) is in early design and iteration phase. I began research towards the end of 2020, and while a stable release is rather far I aim to have work to show by the end of 2021. Ultimately, I hope for it to be more than just a toy.
+Bunny's [specification](https://bunny-lang.org/specification/) is in early design and iteration phase. I began research towards the end of 2020, and while a stable release is rather far I aim to have work to show by the end of 2021. The WebAssembly ecosystem is young, and a lot is still in flux, but I'm bullish on its future. Ultimately I hope for Bunny to leverage this ecosystem for seamless interoperability with other languages.
 
 
 [^1]: this obviously comes down to personal preference, and yours might differ.
