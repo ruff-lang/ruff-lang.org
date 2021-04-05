@@ -28,4 +28,4 @@ Bunny's [specification](https://bunny-lang.org/specification/) is in early desig
 
 
 [^1]: this obviously comes down to personal preference, and yours might differ.
-[^2]: see the following: [WASM](https://webassembly.org), [WASI](https://wasi.dev), [Interface Types](https://hacks.mozilla.org/2019/08/webassembly-interface-types/)
+[^2]: for more info, see [WASM](https://webassembly.org), [WASI](https://wasi.dev), [Interface Types](https://hacks.mozilla.org/2019/08/webassembly-interface-types/).
