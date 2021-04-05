@@ -15,6 +15,7 @@ Most importantly, this is a passion project and a vehicle for me to explore new 
 Below is a list of features planned for the first stable release of Bunny which together _should_ satisfy[^1] the question of 'how'.
 
 - **Minimal and Modern Syntax**, elegant[^1] and expressive.
+- **WebAssembly**, leveraging a growing ecosystem for interop[^2].
 - **Functional**, as in functions are values.
 - **Garbage-Collected**, effort free memory management.
 - **Hygienic Macros**, enabling the full power/fun of macros.
@@ -27,3 +28,4 @@ Bunny's [specification](https://bunny-lang.org/specification/) is in early desig
 
 
 [^1]: this obviously comes down to personal preference, and yours might differ.
+[^2]: see the following: [WASM](https://webassembly.org), [WASI](https://wasi.dev), [Interface Types](https://hacks.mozilla.org/2019/08/webassembly-interface-types/)
