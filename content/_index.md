@@ -25,11 +25,11 @@ Below is a list of features planned for the first stable release of Bunny which 
 
 - **Minimal and Modern Syntax**, elegant[^1] and expressive.
 - **Functional**, as in functions are values.
+- **Batteries Included**, to be a complete and productive tool.
 - **Garbage-Collected**, effort free memory management.
+- **Concurrent**, lightweight with fibers and queues for message passing.
 - **Tail-Call Optimized**, recursion without the overhead.
 - **Hygienic Macros**, enabling the full power/fun of macros.
-- **Concurrent**, lightweight with fibers and queues for message passing.
-- **Batteries Included**, to be a complete and productive tool.
 
 ## When
 
