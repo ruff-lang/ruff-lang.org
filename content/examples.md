@@ -23,7 +23,7 @@ Printing to standard output is a pretty common thing for languages to do. Here's
 (println "What is your name?")
 
 # readline will wait for user input
-(let ((name (read_from_stdin)))
+(let ((name (read_line)))
   (println (format "Hello, %s!" name)))
 ```
 
