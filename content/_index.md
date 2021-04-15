@@ -4,6 +4,15 @@ Bunny (_bunny_, not _bunny lang_) is a simple, practical, and fun[^1] general pu
 
 It is inspired by classic Lisps like [Common Lisp](https://common-lisp.net/) and [Scheme](https://schemers.org/), modern Lisps like [Clojure](https://clojure.org/), dynamic languages like [Ruby](https://www.ruby-lang.org/en/) and [Python](https://www.python.org/), the concurrency patterns of [Go](https://golang.org/), and the module system of [OCaml](https://ocaml.org/).
 
+Here's a small example, computing the `nth` [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number):
+```
+(defun fibonacci (n)
+  (if (< n 2)
+    1
+    (+ (fib (- n 1))
+       (fib (- n 2)))))
+```
+
 ## Why
 
 My motivation is to produce a concrete language specification with wish-list features from its inspirations and to bundle this set features into a cohesive and enjoyable[^1] language.
@@ -17,6 +26,7 @@ Below is a list of features planned for the first stable release of Bunny which 
 - **Minimal and Modern Syntax**, elegant[^1] and expressive.
 - **Functional**, as in functions are values.
 - **Garbage-Collected**, effort free memory management.
+- **Tail-Call Optimized**, recursion without the overhead.
 - **Hygienic Macros**, enabling the full power/fun of macros.
 - **Concurrent**, lightweight with fibers and queues for message passing.
 - **Batteries Included**, to be a complete and productive tool.
