@@ -63,9 +63,8 @@
   a {
       background-color: transparent;
       color: inherit;
-      text-decoration: none;
-      box-shadow: inset 0 -18px 0 #e5edff;
-      font-weight: bold;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
   }
 
   a.footnote-ref {
@@ -99,7 +98,6 @@
   }
 
   div.header-bar {
-      background-color: #e5edff;
       padding: 14px;
       box-shadow: -.1875em .1875em 0 #4a4a4a;
       border: .125em solid #4a4a4a;
@@ -144,21 +142,20 @@
   }
 
   code {
-      background-color: #f2f2f2;
-      color: #6b6b6b;
+      padding: 2px 5px;
+      color: #4a4a4a;
+      line-height: 1.3;
       font-family: "JetBrains Mono", monospace;
       font-size: 13px;
-      line-height: 1.3;
-      padding: 2px 5px;
   }
 
   pre code {
       display: block;
       overflow-wrap: normal;
-      overflow-x: scroll;
+      overflow-x: auto;
       padding: 20px;
-      box-shadow: -.1875em .1875em 0 #c6c6c6;
-      border: .125em solid #c6c6c6;
+      box-shadow: -.1875em .1875em 0 #4a4a4a;
+      border: .125em solid #4a4a4a;
   }
 
   blockquote {
