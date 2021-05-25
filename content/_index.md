@@ -5,7 +5,8 @@ Bunny (_bunny_, not _bunny lang_) is a simple, practical, and fun[^1] general pu
 It is inspired by classic Lisps like [Common Lisp](https://common-lisp.net/) and [Scheme](https://schemers.org/), modern Lisps like [Clojure](https://clojure.org/), dynamic languages like [Ruby](https://www.ruby-lang.org/en/) and [Python](https://www.python.org/), the concurrency patterns of [Go](https://golang.org/), and the module system of [OCaml](https://ocaml.org/).
 
 Here's a small example, computing the `nth` [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number):
-```
+
+```lisp
 (defun fibonacci (n)
   (if (< n 2)
     1
@@ -36,4 +37,3 @@ Below is a list of features planned for the first stable release of Bunny which 
 Bunny's [specification](https://bunny-lang.org/specification/) is in early design and iteration phase. I began research towards the end of 2020, and while a stable release is rather far I aim to have work to show by the end of 2021.
 
 [^1]: this obviously comes down to personal preference, and yours might differ.
-

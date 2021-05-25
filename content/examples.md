@@ -12,18 +12,18 @@ This page contains code examples of Bunny, listed out in increasing complexity.
 
 Printing to standard output is a pretty common thing for languages to do. Here's the classic `Hello World` program.
 
-```
-# println appends a newline character and prints to stdout
+```lisp
+;; println appends a newline character and prints to stdout
 (println "Hello, World!")
 ```
 
 ### Interactive Hello, `<name>`!
 
-```
+```lisp
 (println "What is your name?")
 
-# readline will wait for user input
-(let ((name (read_line)))
+;; readline will wait for user input
+(let ((name (read-line)))
   (println (format "Hello, %s!" name)))
 ```
 
@@ -31,14 +31,13 @@ Printing to standard output is a pretty common thing for languages to do. Here's
 
 Below is a tail-recursive implementation of the factorial function:
 
-```
+```lisp
 (defun factorial (n)
-  (fact_tail_rec n 1))
-
-(defun fact_tail_rec (n acc)
-  (if (= n 0)
-    acc
-    (fact_tail_rec (- n 1) (* n acc))))
+  (defun fact-tail-rec (n acc)
+    (if (= n 0)
+      acc
+      (fact-tail-rec (- n 1) (* n acc))))
+  (fact-tail-rec n 1)))
 ```
 
 ### Simple Webserver

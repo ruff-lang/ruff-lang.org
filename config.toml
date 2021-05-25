@@ -12,7 +12,12 @@ ignoreErrors = ["error-disable-taxonomy"]
   tags = "/blog/:slug"
 
 [params]
-  description = "The Bunny Programming Language"
+  description = "The Bunny Programming Language."
   favicon = "favicon.png"
   images = ["images/logo.png"]
   title = "bunny"
+
+[markup]
+  [markup.highlight]
+    style = "github"
+    tabWidth = 4
