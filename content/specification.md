@@ -431,7 +431,7 @@ A module can be defined to only explicitly export a list of public functions. Ot
 
 (module Utilities)
 
-(defun print_uppercase (arg)
+(defun print-uppercase (arg)
   (let ((uppercase (String.upper arg)))
     (println uppercase)))
 ```
