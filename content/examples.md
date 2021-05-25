@@ -32,11 +32,12 @@ Printing to standard output is a pretty common thing for languages to do. Here's
 Below is a tail-recursive implementation of the factorial function:
 
 ```lisp
+(defun fact-tail-rec (n acc)
+  (if (= n 0)
+    acc
+    (fact-tail-rec (- n 1) (* n acc))))
+
 (defun factorial (n)
-  (defun fact-tail-rec (n acc)
-    (if (= n 0)
-      acc
-      (fact-tail-rec (- n 1) (* n acc))))
   (fact-tail-rec n 1)))
 ```
 
